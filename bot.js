@@ -430,7 +430,7 @@ function play(guild, song) {
 
 client.on("message", message => {
 
- if (message.content === `${prefix}help1`) {
+ if (message.content === `${prefix}help`) {
 
   const embed = new Discord.RichEmbed() //by ! - Thereaper'
 
@@ -465,5 +465,11 @@ ${prefix}queue ⇏ لمعرفة قآئمة التشغيل
    }); 
 
    
+client.on('ready', () => {
+     client.user.setActivity("=help By ꗓᱴ  ♔〔 ໑ڪــɹ̤ᓅ 〕",{type: 'WATCHING'})
+
+});
+
+ 
 
 client.login(process.env.BOT_TOKEN);  //اياكككك تلعب هنا لا تحط توكنك هنا 
