@@ -466,7 +466,7 @@ ${prefix}queue ⇏ لمعرفة قآئمة التشغيل
 
    
 client.on('ready', () => {
-     client.user.setActivity("=help By ꗓᱴ  ♔〔 ໑ڪــɹ̤ᓅ 〕",{type: 'WATCHING'})
+     client.user.setActivity("=help | FN THE BEST",{type: 'WATCHING'})
 
 });
 
