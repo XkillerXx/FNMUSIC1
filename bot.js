@@ -465,11 +465,50 @@ ${prefix}queue ⇏ لمعرفة قآئمة التشغيل
    }); 
 
    
-client.on('ready', () => {
-     client.user.setActivity("=help | FN THE BEST",{type: 'WATCHING'})
 
-});
+const devs = ['336773905043685390' , '469164572960358420' , '' , ''];
 
+const adminprefix = "=";
+
+client.on('message', message => {
+
+    var argresult = message.content.split(` `).slice(1).join(' ');
+
+      if (!devs.includes(message.author.id)) return;
+
+  if (message.content.startsWith(adminprefix + 'ply')) {
+
+    client.user.setGame(argresult);
+
+      message.channel.sendMessage(`**✅   ${argresult}**`)
+
+  } else
+
+  if (message.content.startsWith(adminprefix + 'wt')) {
+
+  client.user.setActivity(argresult, {type:'WATCHING'});
+
+      message.channel.sendMessage(`**✅   ${argresult}**`)
+
+  } else
+
+  if (message.content.startsWith(adminprefix + 'ls')) {
+
+  client.user.setActivity(argresult , {type:'LISTENING'});
+
+      message.channel.sendMessage(`**✅   ${argresult}**`)
+
+  } else
+
+  if (message.content.startsWith(adminprefix + 'st')) {
+
+    client.user.setGame(argresult, "https://www.twitch.tv/idk");
+
+      message.channel.sendMessage(`**✅   ${argresult}**`)
+
+  }
+
+  });
  
 
 client.login(process.env.BOT_TOKEN);  //اياكككك تلعب هنا لا تحط توكنك هنا 
